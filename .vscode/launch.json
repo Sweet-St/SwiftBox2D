@@ -1,0 +1,28 @@
+{
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "sourceLanguages": [
+                "swift"
+            ],
+            "args": [],
+            "cwd": "${workspaceFolder:SwiftBox2D}",
+            "name": "Debug SwiftBox2D",
+            "program": "${workspaceFolder:SwiftBox2D}/.build/debug/SwiftBox2D",
+            "preLaunchTask": "swift: Build Debug SwiftBox2D"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "sourceLanguages": [
+                "swift"
+            ],
+            "args": [],
+            "cwd": "${workspaceFolder:SwiftBox2D}",
+            "name": "Release SwiftBox2D",
+            "program": "${workspaceFolder:SwiftBox2D}/.build/release/SwiftBox2D",
+            "preLaunchTask": "swift: Build Release SwiftBox2D"
+        }
+    ]
+}
