@@ -13,6 +13,8 @@ let package = Package(
             dependencies: ["CppBox2D"],
             sources: ["main.swift"],
             swiftSettings: [.interoperabilityMode(.Cxx)]),
-        .target(name: "CppBox2D")    
-    ]
+        .target(name: "CppBox2D",
+            linkerSettings: [.linkedLibrary("box2d")])    
+    ],
+    cxxLanguageStandard: .cxx14
 )
