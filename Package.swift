@@ -15,9 +15,8 @@ let package = Package(
             cxxSettings: [.headerSearchPath("../CppBox2D/box2d/include")],
             swiftSettings: [.interoperabilityMode(.Cxx)]),
         .target(name: "CppBox2D",
-            cxxSettings: [.headerSearchPath("box2d/include")],
-            linkerSettings: [.linkedLibrary("box2d")]
+            cxxSettings: [.headerSearchPath("box2d/include")]
         )
     ],
-    cxxLanguageStandard: .cxx14
+    cxxLanguageStandard: .cxx20
 )

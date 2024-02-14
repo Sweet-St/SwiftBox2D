@@ -21,6 +21,7 @@ groundBodyDef.position.Set(0.0, -10.0)
 // The body is also added to the world.
 
 //c++: b2Body* CreateBody(const b2BodyDef* def);
+// from OpaquePointer to b2Body, if class b2Body is "import_as_ref"
 var groundBody = world.CreateBody(&groundBodyDef)!
 
 // Define the ground box shape.
