@@ -12,9 +12,12 @@ let package = Package(
             name: "SwiftBox2D",
             dependencies: ["CppBox2D"],
             sources: ["main.swift"],
+            cxxSettings: [.headerSearchPath("../CppBox2D/box2d/include")],
             swiftSettings: [.interoperabilityMode(.Cxx)]),
         .target(name: "CppBox2D",
-            linkerSettings: [.linkedLibrary("box2d")])    
+            cxxSettings: [.headerSearchPath("box2d/include")],
+            linkerSettings: [.linkedLibrary("box2d")]
+        )
     ],
     cxxLanguageStandard: .cxx14
 )
